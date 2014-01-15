@@ -1,8 +1,10 @@
 Portfolio App
 ==========
 
-Nothing to see here yet, have a cat picture.
+This is the future home of my portfolio app however there isn't much to see right now!
 
-![kitty][image]
 
-[image]: http://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Turkish_Van_Cat.jpg/546px-Turkish_Van_Cat.jpg "Cat"
+
+![app][image]
+
+[image]:https://www.dropbox.com/s/fqq80bhy8nv4tv0/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202014-01-14%2023.07.18.png "App screen"
