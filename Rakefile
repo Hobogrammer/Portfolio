@@ -5,11 +5,5 @@ require File.expand_path('../config/application', __FILE__)
 
 Portfolio::Application.load_tasks
 
-require 'rake/testtask'
 
-task default: 'minitest:features'
-
-Rake::TestTask.new do |t|
-  t.libs << "spec"
-  t.pattern = "test/**/*_spec.rb"
-end
+task default: 'minitest'
