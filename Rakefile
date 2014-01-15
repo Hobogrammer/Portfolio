@@ -7,7 +7,7 @@ Portfolio::Application.load_tasks
 
 require 'rake/testtask'
 
-task default: 'test'
+task default: 'minitest:features'
 
 Rake::TestTask.new do |t|
   t.libs << "spec"

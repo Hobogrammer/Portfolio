@@ -4,8 +4,7 @@ gem 'rails', '4.0.2'
 
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jbuilder', '~> 1.2'
-gem 'jquery-rails'
-gem 'minitest-rails'
+gem 'jquery-rails'  
 gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.0'
 gem 'therubyracer'
@@ -16,6 +15,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development, :test do
+  gem 'minitest-rails'
+end
 group :test do
   gem "minitest-rails-capybara"
 end
