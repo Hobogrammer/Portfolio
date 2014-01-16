@@ -1,9 +1,8 @@
 require "test_helper"
 
-feature "StaticHomePage" do
-  scenario "the test is sound" do
+feature "Static Home Page" do
+  scenario "visit the home page" do
     visit "/"
     page.must_have_content "Welcome aboard"
-    page.wont_have_content "Goobye All!"
   end
 end
