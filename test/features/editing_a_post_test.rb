@@ -3,9 +3,7 @@ require "test_helper"
 feature "Editing A Post" do
   scenario "submit updates to an existing post" do
 
-    post  = Post.create!(title: "Foobar", body: "Foobaz")
-
-    visit post_path(post)
+    visit post_path(posts(:cr))
     click_link('Edit')
 
     fill_in('Title', :with => "Newbar")
