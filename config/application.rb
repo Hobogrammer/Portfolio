@@ -28,5 +28,7 @@ module Portfolio
     config.generators do |g|
         g.test_framework :mini_test, :spec => true, :fixture => false
     end
+
+    config.i18n.enforce_available_locales = false
   end
 end
