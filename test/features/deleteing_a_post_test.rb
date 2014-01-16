@@ -5,9 +5,9 @@ feature "Deleteing A Post" do
 
     post = Post.create(title: "Foobar", body: "Foobaz")
 
-    visit show_post_path(post)
+    visit posts_path
 
-    click_on('delete')
+    click_on('Destroy')
 
     page.wont_have_content "Foobar"
     page.wont_have_content "Foobaz"
