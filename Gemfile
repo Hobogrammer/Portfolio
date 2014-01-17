@@ -10,6 +10,7 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'therubyracer'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+gem 'zurb-foundation', '~> 4.3.2'
 
 group :doc do
   gem 'sdoc', require: false
