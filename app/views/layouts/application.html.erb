@@ -6,26 +6,123 @@
 <!--[if IE 9 ]>    <html class="ie9" lang="en"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
   <head>
-  	<meta charset="utf-8" />
+    <meta charset="utf-8" />
 
-  	<!-- Uncomment to make IE8 render like IE7 -->
-  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+    <!-- Uncomment to make IE8 render like IE7 -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
 
-  	<!-- Set the viewport width to device width for mobile -->
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
-  	<%= stylesheet_link_tag    "application" %>
-  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
+    <%= javascript_include_tag "application" %>
   </head>
 
   <body>
+    <div class="header">
 
-    <div class="small-8 columns"><%= yield %></div>
+      <div id="site_title"><a href="index.html"><img src="img/logo.png" /></a></div>
+
+    <!-- Main Menu -->
+
+      <ol id="menu">
+           <li class="active_menu_item"><a href="index.html">Home</a>
+
+            <!-- sub menu -->
+              <ol>
+                <li><a href="nivo.html">Nivo Slider</a></li>
+                <li><a href="ei_slider.html">EI Slider</a></li>
+                <li><a href="fullscreen_gallery.html">Fullscreen Slider</a></li>
+                <li><a href="image_frontpage.html">Static Image</a></li>
+              </ol>
+            </li><!-- END sub menu -->
+
+            <li><a href="#">Pages</a>
+
+            <!-- sub menu -->
+              <ol>
+                <li><a href="magazine.html">Magazine</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="full-width.html">Full Width Page</a></li>
+                <li><a href="columns.html">Columns</a></li>
+              </ol>
+            </li><!-- END sub menu -->
+
+            <li><a href="elements.html">Elements</a></li>
+
+            <li><a href="#">Galleries</a>
+
+            <!-- sub menu -->
+              <ol>
+                <li><a href="gallery-simple.html">Simple</a></li>
+                <li><a href="portfolio.html">Filterable</a></li>
+                <li><a href="gallery_fader.html">Fade Scroll</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li class="last"><a href="photogrid.html">PhotoGrid</a></li>
+              </ol>
+            </li><!-- END sub menu -->
+
+             <li><a href="contact.html">Contact</a></li>
+      </ol>
+    </div><!-- END header -->
 
 
-    <%= javascript_include_tag "application" %>
+    <%= yield %>
+
+
+    <div id="footer">
+
+    <!-- First Column -->
+
+    <div class="one-fourth">
+        <h3>Useful Links</h3>
+            <ul class="footer_links">
+                <li><a href="#">Lorem Ipsum</a></li>
+                <li><a href="#">Ellem Ciet</a></li>
+                <li><a href="#">Currivitas</a></li>
+                <li><a href="#">Salim Aritu</a></li>
+            </ul>
+    </div>
+
+    <!-- Second Column -->
+
+    <div class="one-fourth">
+        <h3>Terms</h3>
+            <ul class="footer_links">
+                <li><a href="#">Lorem Ipsum</a></li>
+                <li><a href="#">Ellem Ciet</a></li>
+                <li><a href="#">Currivitas</a></li>
+                <li><a href="#">Salim Aritu</a></li>
+            </ul>
+    </div>
+
+    <!-- Third Column -->
+
+    <div class="one-fourth">
+        <h3>Information</h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet enim id dui tincidunt vestibulum rhoncus a felis.
+
+        <div id="social_icons">
+        Theme by <a href="http://www.csstemplateheaven.com">CssTemplateHeaven</a><br /> Photos © <a href="http://dieterschneider.net" title="Dieter Schneider Photography">Dieter Schneider</a>
+        </div>
+
+    </div>
+
+    <!-- Fourth Column -->
+
+    <div class="one-fourth last">
+        <h3>Socialize</h3>
+            <img src="img/icon_fb.png" alt="Facebook">
+            <img src="img/icon_twitter.png" alt="Facebook">
+            <img src="img/icon_in.png" alt="Facebook">
+    </div>
+
+    <div style="clear:both"></div>
+
+    </div> <!-- END footer -->
   </body>
 </html>
