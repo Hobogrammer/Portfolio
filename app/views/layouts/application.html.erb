@@ -14,7 +14,7 @@
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Andre 'Hobogrammer' Smith\'s Portfolio" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/custom.modernizr" %>
@@ -25,46 +25,14 @@
   <body>
     <div class="header">
 
-      <div id="site_title"><a href="index.html"><img src="img/logo.png" /></a></div>
+      <div id="site_title" class="circular"></div>
 
     <!-- Main Menu -->
 
       <ol id="menu">
            <li class="active_menu_item"><a href="index.html">Home</a>
 
-            <!-- sub menu -->
-              <ol>
-                <li><a href="nivo.html">Nivo Slider</a></li>
-                <li><a href="ei_slider.html">EI Slider</a></li>
-                <li><a href="fullscreen_gallery.html">Fullscreen Slider</a></li>
-                <li><a href="image_frontpage.html">Static Image</a></li>
-              </ol>
-            </li><!-- END sub menu -->
-
-            <li><a href="#">Pages</a>
-
-            <!-- sub menu -->
-              <ol>
-                <li><a href="magazine.html">Magazine</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="full-width.html">Full Width Page</a></li>
-                <li><a href="columns.html">Columns</a></li>
-              </ol>
-            </li><!-- END sub menu -->
-
-            <li><a href="elements.html">Elements</a></li>
-
-            <li><a href="#">Galleries</a>
-
-            <!-- sub menu -->
-              <ol>
-                <li><a href="gallery-simple.html">Simple</a></li>
-                <li><a href="portfolio.html">Filterable</a></li>
-                <li><a href="gallery_fader.html">Fade Scroll</a></li>
-                <li><a href="video.html">Video</a></li>
-                <li class="last"><a href="photogrid.html">PhotoGrid</a></li>
-              </ol>
-            </li><!-- END sub menu -->
+            <li><a href="#">Portfolio</a>
 
              <li><a href="contact.html">Contact</a></li>
       </ol>
@@ -78,50 +46,16 @@
 
     <!-- First Column -->
 
-    <div class="one-fourth">
-        <h3>Useful Links</h3>
+        <div class="one-fourth">
+            <h3>Useful Links</h3>
             <ul class="footer_links">
-                <li><a href="#">Lorem Ipsum</a></li>
-                <li><a href="#">Ellem Ciet</a></li>
-                <li><a href="#">Currivitas</a></li>
-                <li><a href="#">Salim Aritu</a></li>
+                <li><a href="http://github.com/Hobogrammer">Github</a></li>
+                <li><a href="http://twitter.com/Hobogrammer">Twitter</a></li>
+                <li><a href="http://www.linkedin.com/in/andrepsmith">LinkedIn</a></li>
             </ul>
-    </div>
-
-    <!-- Second Column -->
-
-    <div class="one-fourth">
-        <h3>Terms</h3>
-            <ul class="footer_links">
-                <li><a href="#">Lorem Ipsum</a></li>
-                <li><a href="#">Ellem Ciet</a></li>
-                <li><a href="#">Currivitas</a></li>
-                <li><a href="#">Salim Aritu</a></li>
-            </ul>
-    </div>
-
-    <!-- Third Column -->
-
-    <div class="one-fourth">
-        <h3>Information</h3>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet enim id dui tincidunt vestibulum rhoncus a felis.
-
-        <div id="social_icons">
-        Theme by <a href="http://www.csstemplateheaven.com">CssTemplateHeaven</a><br /> Photos © <a href="http://dieterschneider.net" title="Dieter Schneider Photography">Dieter Schneider</a>
         </div>
 
-    </div>
-
-    <!-- Fourth Column -->
-
-    <div class="one-fourth last">
-        <h3>Socialize</h3>
-            <img src="img/icon_fb.png" alt="Facebook">
-            <img src="img/icon_twitter.png" alt="Facebook">
-            <img src="img/icon_in.png" alt="Facebook">
-    </div>
-
-    <div style="clear:both"></div>
+        <div style="clear:both"></div>
 
     </div> <!-- END footer -->
   </body>
