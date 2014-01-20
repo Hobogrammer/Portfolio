@@ -18,6 +18,5 @@ test:
   adapter: postgresql
   encoding: utf-8
   database: Portfolio_test
-  pool: 5
-  username: silent
-  password:
+  username: postgres
+
