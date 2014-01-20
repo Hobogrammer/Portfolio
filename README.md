@@ -1,4 +1,4 @@
-Portfolio App
+Portfolio App [![Build Status](https://travis-ci.org/Hobogrammer/Portfolio.png?branch=master)](https://travis-ci.org/Hobogrammer/Portfolio)
 ==========
 
 This is the future home of my portfolio app however there isn't much to see right now!
