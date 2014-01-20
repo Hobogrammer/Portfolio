@@ -21,4 +21,5 @@ end
 
 group :test do
   gem "minitest-rails-capybara"
+  gem 'rake'
 end
