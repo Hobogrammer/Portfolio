@@ -23,40 +23,9 @@
   </head>
 
   <body>
-    <div class="header">
-
-      <div id="site_title" class="circular"></div>
-
-    <!-- Main Menu -->
-
-      <ol id="menu">
-           <li class="active_menu_item"><a href="index.html">Home</a>
-
-            <li><a href="#">Portfolio</a>
-
-             <li><a href="contact.html">Contact</a></li>
-      </ol>
-    </div><!-- END header -->
-
-
+    <%= render 'layouts/header' %>
     <%= yield %>
-
-
-    <div id="footer">
-
-    <!-- First Column -->
-
-        <div class="one-fourth">
-            <h3>Useful Links</h3>
-            <ul class="footer_links">
-                <li><a href="http://github.com/Hobogrammer">Github</a></li>
-                <li><a href="http://twitter.com/Hobogrammer">Twitter</a></li>
-                <li><a href="http://www.linkedin.com/in/andrepsmith">LinkedIn</a></li>
-            </ul>
-        </div>
-
-        <div style="clear:both"></div>
-
-    </div> <!-- END footer -->
+    <%= render 'layouts/footer' %>
   </body>
 </html>
+
