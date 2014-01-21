@@ -21,11 +21,16 @@
     <%= csrf_meta_tags %>
     <%= javascript_include_tag "application" %>
   </head>
-
   <body>
     <%= render 'layouts/header' %>
-    <%= yield %>
+    <% flash.each do |key,value| %>
+      <div class="alert-box round <%= flash_class(key) %>" >
+          <%= value %>
+      </div>
+    <% end %>
+    <div id="container">
+      <%= yield %>
+    </div>
     <%= render 'layouts/footer' %>
   </body>
 </html>
-

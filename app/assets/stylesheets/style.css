@@ -18,6 +18,14 @@ body {	font-family: Arial, Helvetica, sans-serif;
 		color: #666;
 }
 
+.alert-box {
+  height:  30px;
+  width:  960px;
+  text-align: center;
+  margin-right: 250px;
+  display:inline;
+}
+
 .circular {
   width: 130px;
   height: 130px;
