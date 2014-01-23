@@ -14,6 +14,7 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'zurb-foundation', '~> 4.3.2'
 gem 'pg'
+gem 'devise'
 
 group :doc do
   gem 'sdoc', require: false
