@@ -4,4 +4,4 @@ Joe:
 
 Jim:
   email: user2@mysite.com
-  encrypted_password: <%= User.new.send(:password_digest, "password1") %>
+  encrypted_password: <%= User.new.send(:password_digest, "password") %>
