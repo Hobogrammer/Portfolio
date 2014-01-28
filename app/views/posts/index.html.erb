@@ -40,6 +40,10 @@ Praesent luctus porta rutrum. Fusce tellus velit, pulvinar nec nulla in, sceleri
 
   <br>
 
-  <%= link_to 'New Post', new_post_path, class: "button radius" %>
+  <% if current_user %>
+    <% if PostPolicy.new(current_user, @post) %>
+      <%= link_to 'New Post', new_post_path, class: "button radius" %>
+    <% end %>
+  <% end %>
 
 <div style="clear:both"></div>

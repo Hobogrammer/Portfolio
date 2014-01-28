@@ -5,17 +5,19 @@ ruby '2.1.0'
 gem 'rails', '4.0.2'
 
 gem 'coffee-rails', '~> 4.0.0'
+gem 'devise'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
 gem 'launchy'
+gem 'pg'
+gem 'pundit'
 gem 'rails_12factor', group: :production
 gem 'sass-rails', '~> 4.0.0'
 gem 'therubyracer'
 gem 'turbolinks'
+gem 'turn'
 gem 'uglifier', '>= 1.3.0'
 gem 'zurb-foundation', '~> 4.3.2'
-gem 'pg'
-gem 'devise'
 
 group :doc do
   gem 'sdoc', require: false
