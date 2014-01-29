@@ -9,4 +9,8 @@ class PostPolicy < ApplicationPolicy
   def publish?
     @user.role == "editor"
   end
+
+  def create?
+    @user.role == "author" or @user.role == "editor"
+  end
 end
