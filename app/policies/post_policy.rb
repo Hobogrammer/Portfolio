@@ -9,4 +9,19 @@ class PostPolicy < ApplicationPolicy
   def publish?
     @user.role == "editor"
   end
+
+  def create?
+    return unless @user.present?
+    @user.editor? or @user.author?
+  end
+
+  def destroy?
+    return unless @user.present?
+    @user.editor?
+  end
+
+  def update?
+    return unless @user.present?
+    @user.editor? or @user.author?
+  end
 end

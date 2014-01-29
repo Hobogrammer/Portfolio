@@ -19,11 +19,13 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
 
-    if @post.save
-      current_user.posts << @post
-      redirect_to @post, notice: 'Post was successfully created.'
-    else
-      render action: 'new'
+    if policy(@post).create?
+      if @post.save
+        current_user.posts << @post
+        redirect_to @post, notice: 'Post was successfully created.'
+      else
+        render action: 'new'
+      end
     end
   end
 
@@ -37,7 +39,7 @@ class PostsController < ApplicationController
 
   def destroy
     if @post.destroy
-      redirect_to posts_url
+      redirect_to posts_url, notice: 'Post was destroyed'
     end
   end
 

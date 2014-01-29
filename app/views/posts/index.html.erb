@@ -31,8 +31,12 @@ Praesent luctus porta rutrum. Fusce tellus velit, pulvinar nec nulla in, sceleri
           <td><%= post.title %></td>
           <td><%= post.body %></td>
           <td><%= link_to 'Show', post %></td>
-          <td><%= link_to 'Edit', edit_post_path(post) %></td>
-          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% if policy(post).update? %>
+            <td><%= link_to 'Edit', edit_post_path(post) %></td>
+          <% end %>
+          <% if policy(post).destroy? %>
+            <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
         </tr>
       <% end %>
     </tbody>
@@ -40,10 +44,8 @@ Praesent luctus porta rutrum. Fusce tellus velit, pulvinar nec nulla in, sceleri
 
   <br>
 
-  <% if current_user %>
-    <% if PostPolicy.new(current_user, @post) %>
-      <%= link_to 'New Post', new_post_path, class: "button radius" %>
-    <% end %>
+  <% if policy(@posts).create? %>
+    <%= link_to 'New Post', new_post_path, class: "button radius" %>
   <% end %>
 
 <div style="clear:both"></div>

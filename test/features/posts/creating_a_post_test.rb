@@ -19,6 +19,23 @@ feature "Creating A Post" do
     page.text.must_include "Status: Unpublished"
   end
 
+  scenario "editors can create a new post" do
+    sign_in(:editor)
+
+    visit new_post_path
+
+    fill_in('Title', :with => posts(:cr).title )
+    fill_in('Body', :with => posts(:cr).body )
+
+    click_on('Create Post')
+
+    page.must_have_content(posts(:cr).title)
+    page.must_have_content(posts(:cr).body)
+    page.has_css? "#author"
+    page.text.must_include users(:editor).email
+    page.text.must_include "Status: Unpublished"
+  end
+
   scenario "Unauthenticated site vistors cannot visit the new_post_path" do
     visit new_post_path
 
