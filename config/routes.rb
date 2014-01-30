@@ -1,9 +1,11 @@
 Portfolio::Application.routes.draw do
-  resources :comments
 
   devise_for :users
-  resources :posts
   resources :projects
 
-  root to:"posts#index"
+  resources :posts do
+    resources :comments
+  end
+
+  root to:"welcome#index"
 end
