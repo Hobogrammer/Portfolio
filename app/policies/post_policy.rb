@@ -12,7 +12,7 @@ class PostPolicy < ApplicationPolicy
 
   def create?
     return unless @user.present?
-    @user.editor? or @user.author?
+    @user.editor? || @user.author?
   end
 
   def destroy?
@@ -22,6 +22,6 @@ class PostPolicy < ApplicationPolicy
 
   def update?
     return unless @user.present?
-    @user.editor? or @user.author?
+    @user.editor? || @user.author?
   end
 end
