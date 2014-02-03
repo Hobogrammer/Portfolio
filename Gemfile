@@ -6,9 +6,11 @@ gem 'rails', '4.0.2'
 
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
+gem 'figaro'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
 gem 'launchy'
+gem 'omniauth-twitter'
 gem 'pg'
 gem 'pundit'
 gem 'rails_12factor', group: :production
