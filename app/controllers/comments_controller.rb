@@ -4,6 +4,8 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @post.comments.new(comment_params)
+    current_user.name.present? ? @comment.author = current_user.name : @comment.author = current_user.email
+
     if @comment.save
       redirect_to post_path(@post), success: "Comment submitted for moderation"
     else
