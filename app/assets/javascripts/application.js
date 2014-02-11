@@ -16,3 +16,6 @@
 //= require turbolinks
 //= require_tree .
 
+$(document).ajaxError(function( event, jqxhr, settings, exception ) {
+  console.log(jqxhr);
+})
