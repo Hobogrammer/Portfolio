@@ -37,7 +37,7 @@ class ProjectsController < ApplicationController
         format.js
       else
         format.html { render :edit, error: "Project could not be edited" }
-        format.js
+        format.js { render text: @project.errors.full_messages.join('. '), status: :unprocessable_entity }
       end
     end
   end
@@ -49,7 +49,7 @@ class ProjectsController < ApplicationController
         format.js
       else
         format.html { redirect_to project_path(@project), error: "Project could not be deleted" }
-        format.js
+        format.js { render text: @project.errors.full_messages.join('. '), status: :unprocessable_entity }
       end
     end
   end
