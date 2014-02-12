@@ -8,7 +8,7 @@ development:
   encoding: utf-8
   database: Portfolio_development
   pool: 5
-  username: silent
+  username: postgres
   password:
 
 # Warning: The database defined as "test" will be erased and

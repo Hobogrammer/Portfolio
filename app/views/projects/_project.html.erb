@@ -1,0 +1,7 @@
+<li id="project_<%= project.id %>">
+  <h3><%= project.name %></h3>
+  <p><%= project.technologies_used %></p>
+  <div class="nav">
+    <%= link_to 'Edit', edit_project_path(project), remote: true %> | <%= link_to 'Destroy', project, remote: true, method: :delete, data: { confirm: 'Are you sure?'} %>
+  </div>
+</li>

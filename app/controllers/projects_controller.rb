@@ -11,12 +11,14 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
-    if @project.save
-      flash[:notice] = "Project has been created"
-      redirect_to @project
-    else
-      flash[:error] = "Project could not be saved"
-      render :new
+    respond_to do |format|
+      if @project.save
+        format.html { redirect_to @project, notice: "Project has been created" }
+        format.js
+      else
+        format.html{ render :new, error: "Project could not be saved" }
+        format.js { render text: @project.errors.full_messages.join('. '), status: :unprocessable_entity }
+      end
     end
   end
 
@@ -29,20 +31,26 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    if @project.update_attributes(project_params)
-      redirect_to @project, notice: 'Project was successfully updated'
-    else
-      flash[:error] = "Project could not be edited"
-      render :edit
+    respond_to do |format|
+      if @project.update_attributes(project_params)
+        format.html { redirect_to @project, notice: 'Project was successfully updated'}
+        format.js
+      else
+        format.html { render :edit, error: "Project could not be edited" }
+        format.js
+      end
     end
   end
 
   def destroy
-    if @project.destroy
-      redirect_to projects_path, notice: 'Project deleted'
-    else
-      flash[:error] = "Project could not be deleted"
-      redirect_to project_path(@project)
+    respond_to do |format|
+      if @project.destroy
+        format.html { redirect_to projects_path, notice: 'Project deleted' }
+        format.js
+      else
+        format.html { redirect_to project_path(@project), error: "Project could not be deleted" }
+        format.js
+      end
     end
   end
 
