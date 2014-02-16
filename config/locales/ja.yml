@@ -1,0 +1,8 @@
+ja:
+  time:
+    pm: "午後"
+    am: "午前"
+    formats:
+      default: "%-d %M, %Y, %I:%M %P"
+      short: "%d/%m/%y %H:%M"
+      long: "#-d %M %Y, %H:%M:%S"
