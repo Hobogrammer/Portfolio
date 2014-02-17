@@ -4,6 +4,7 @@ ruby '2.1.0'
 
 gem 'rails', '4.0.2'
 
+gem 'browser-timezone-rails'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
 gem 'figaro'
@@ -24,6 +25,8 @@ gem 'zurb-foundation', '~> 4.3.2'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'pry'
+  gem 'pry-debugger'
 end
 
 group :doc do

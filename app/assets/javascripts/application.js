@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require foundation
 //= require turbolinks
+//= require browser_timezone_rails/application.js
 //= require_tree .
 
 $(document).ajaxError(function( event, jqxhr, settings, exception ) {
