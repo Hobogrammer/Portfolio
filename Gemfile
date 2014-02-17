@@ -16,6 +16,7 @@ gem 'pg'
 gem 'pundit'
 gem 'rails_12factor', group: :production
 gem 'sass-rails', '~> 4.0.0'
+gem 'simple_form'
 gem 'therubyracer'
 gem 'turbolinks'
 gem 'turn'
