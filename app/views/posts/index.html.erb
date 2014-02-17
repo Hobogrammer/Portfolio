@@ -17,7 +17,7 @@
         <tr>
           <td><%= post.title %></td>
           <td><%= post.body %></td>
-          <td><%= l post.created_at, format: :short %></td>
+          <td><%= l post.created_at, format: :long %></td>
           <td><%= link_to 'Show', post %></td>
           <% if policy(post).update? %>
             <td><%= link_to 'Edit', edit_post_path(post) %></td>

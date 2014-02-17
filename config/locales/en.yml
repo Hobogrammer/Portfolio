@@ -24,3 +24,5 @@ en:
   time:
     formats:
       default: "%B %-d, %Y  %I:%M %P"
+      short: "%b %d, %y, %:I:%M"
+      long: "%B %-d, %Y  %I:%M:%S %P"

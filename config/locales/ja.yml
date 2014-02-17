@@ -5,4 +5,4 @@ ja:
     formats:
       default: "%-d %M, %Y, %I:%M %P"
       short: "%d/%m/%y %H:%M"
-      long: "#-d %M %Y, %H:%M:%S"
+      long: "%-d %^B %Y, %H:%M:%S %P"
