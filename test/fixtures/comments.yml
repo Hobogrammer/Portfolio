@@ -1,0 +1,7 @@
+joes_comment:
+  content: New feature
+  commentable: cr (Post)
+
+jims_comment:
+  content: I've seen better_errors
+  commentable: portfolio (Project)

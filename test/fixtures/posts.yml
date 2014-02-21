@@ -3,3 +3,9 @@ cr:
   body: This is how I learned web development!
   author: Joe
   published: true
+
+new:
+  title: Test
+  body: This is a test
+  author: Joe
+  published: false
