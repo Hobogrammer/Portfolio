@@ -26,8 +26,12 @@ gem 'zurb-foundation', '~> 4.3.2'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'guard'
+  gem 'guard-minitest'
   gem 'pry'
   gem 'pry-debugger'
+  gem 'rb-readline'
+  gem 'spring'
 end
 
 group :doc do
