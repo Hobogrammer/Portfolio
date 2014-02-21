@@ -2,6 +2,7 @@ require "test_helper"
 
 feature "updating comment approved status" do
   scenario "editor approving comments" do
+    skip
     sign_in(:editor)
 
     visit  post_path(posts(:cr))

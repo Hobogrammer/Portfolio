@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   before_action :load_commentable, only: [:create]
 
   def create
-    @comment = @commentable.comments.new(params[:comment])
+    @comment = @commentable.comments.new(comment_params)
     current_user.name.present? ? @comment.author = current_user.name : @comment.author = current_user.email
 
     if @comment.save
@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
   private
 
     def comment_params
-      params.require(:comment).permit(:content, :commentable_id, :author)
+      params.require(:comment).permit(:content, :commentable_id, :commentable_type, :author)
     end
 
     def load_commentable
