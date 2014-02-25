@@ -39,6 +39,7 @@ group :doc do
 end
 
 group :test do
+  gem "email_spec"
   gem "minitest-rails-capybara"
   gem 'rake'
   gem 'simplecov', :require => false
