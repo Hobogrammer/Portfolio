@@ -1,5 +1,4 @@
 require 'simplecov'
-require 'minitest-matchers'
 require 'email_spec'
 
 SimpleCov.start 'rails'
